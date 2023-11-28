@@ -1,4 +1,3 @@
-from collections import defaultdict
 '''Task: Student Database
 
 Create a simple student database program using Python dictionaries and basic data types. The program should be able to perform the following actions:
@@ -14,6 +13,7 @@ Update Student Information: Allow the user to update the information of a specif
 Delete Student: Allow the user to delete a student from the database based on their name.
 """
 '''
+from collections import defaultdict
 studentInfo = defaultdict(list)
 def addStudent():
     name = input("Enter the student name: ")
@@ -62,7 +62,8 @@ def main():
     print("Welcome to the simple student database program! ")
     flag = True
     while(flag):
-        num = int(input("Enter ur choice: "))
+        print("Enter your choice: \n 1. Add a student to the database \n 2. View the student's details \n 3. Update student information \n 4. Delete a student from the database. \n Enter any other number to exit the program." )
+        num = int(input())
         if num == 1:
             addStudent()
         elif num == 2:
